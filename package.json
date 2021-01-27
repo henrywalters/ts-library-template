@@ -1,0 +1,19 @@
+{
+  "name": "ts-lib-template",
+  "version": "1.0.0",
+  "description": "Library for interacting with the a HAuth server",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "watch": "find src/ | entr tsc",
+    "demo-serve": "node demo/server.js",
+    "demo-build": "cd demo && webpack && cd ..",
+    "demo-watch": "cd demo && webpack --watch && cd .."
+  },
+  "author": "Henry Walters",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  }
+}
