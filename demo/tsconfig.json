@@ -1,13 +1,14 @@
 {
-    "compilerOptions": {
-      "outDir": "./dist/",
-      "moduleResolution": "node",
-      "sourceMap": true,
-      "noImplicitAny": true,
-      "module": "es6",
-      "target": "es6",
-      "jsx": "react",
-      "allowJs": true,
-      "baseUrl": "./"
-    }
-  }
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "lib": ["ES2022", "DOM"],
+    "esModuleInterop": true,
+    "strict": true,
+    "outDir": "./dist"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

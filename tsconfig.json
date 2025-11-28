@@ -1,11 +1,30 @@
 {
+	"$schema": "https://json.schemastore.org/tsconfig",
 	"compilerOptions": {
-		"module": "commonjs",
-		"target": "es2015",
+		"target": "ES2022",
+		"module": "ESNext",
+		"lib": ["ES2022", "DOM"],
+		"moduleResolution": "bundler",
+		"resolveJsonModule": true,
+		"strict": true,
 		"declaration": true,
-		"outDir": "./dist"
+		"declarationMap": true,
+		"emitDeclarationOnly": false,
+		"sourceMap": true,
+		"inlineSources": true,
+		"outDir": "./dist",
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"skipLibCheck": true,
+		"noEmitOnError": true
 	},
 	"include": [
 		"src/**/*"
+	],
+	"exclude": [
+		"dist",
+		"node_modules",
+		"demo"
 	]
 }

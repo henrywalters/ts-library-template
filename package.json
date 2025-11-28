@@ -1,19 +1,22 @@
 {
   "name": "ts-lib-template",
   "version": "1.0.0",
-  "description": "Library for interacting with the a HAuth server",
+  "description": "Library for interacting with the HAuth server",
+  "type": "module",
   "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "watch": "find src/ | entr tsc",
-    "demo-serve": "node demo/server.js",
-    "demo-build": "cd demo && webpack && cd ..",
-    "demo-watch": "cd demo && webpack --watch && cd .."
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -p tsconfig.json --watch",
+    "clean": "rm -rf dist",
+    "demo": "vite demo",
+    "demo:build": "vite build demo"
   },
   "author": "Henry Walters",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^4.1.3"
+    "typescript": "^5.9.3",
+    "vite": "^5.0.0"
   }
 }
